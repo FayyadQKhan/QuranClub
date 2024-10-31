@@ -1,68 +1,58 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
-  <head>
-    <title>Quranic Verses and Custom Phrases</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="assets/css/main.css" />
-  </head>
-  <body class="is-preload">
-    <!-- Wrapper -->
-    <div id="wrapper">
-      <!-- Header -->
-      <header id="header">
-        <h1>Quranic Verses and Explanations</h1>
-      </header>
-
-      <!-- Main -->
-      <div id="main">
-        <!-- Quranic Verses Section -->
-        <section class="verse-section">
-          <h2>Quranic Verses</h2>
-          <div class="verse">
-            <h3>Verse 1</h3>
-            <p>“Indeed, Allah is with those who are patient.” - Quran 2:153</p>
-          </div>
-          <div class="verse">
-            <h3>Verse 2</h3>
-            <p>“And He found you lost and guided [you].” - Quran 93:7</p>
-          </div>
-        </section>
-
-        <!-- Custom Phrases and Explanations Section -->
-        <section class="custom-section">
-          <h2>Custom Phrases and Explanations</h2>
-          <div class="phrase">
-            <h3>Phrase: Bismillah</h3>
-            <p>Explanation: "In the name of Allah, the Most Gracious, the Most Merciful."</p>
-            <button class="edit-btn">Edit</button>
-            <button class="delete-btn">Delete</button>
-          </div>
-          <button class="add-btn">Add Phrase</button>
-        </section>
-
-        <!-- File Upload Section -->
-        <section class="upload-section">
-          <h2>Upload Images and Files</h2>
-          <form id="file-upload-form" method="post" enctype="multipart/form-data">
-            <input type="file" name="file" accept=".jpg,.jpeg,.png,.pdf,.csv" />
-            <button type="submit" class="upload-button">Upload</button>
-          </form>
-          <button class="save-btn">Save Files</button>
-          <button class="delete-btn">Delete Files</button>
-        </section>
-      </div>
-
-      <!-- Footer -->
-      <footer id="footer" class="panel">
-        <div class="inner">
-          <p>&copy; Your Website. All rights reserved.</p>
-        </div>
-      </footer>
+<head>
+    <title>Quranic Verses</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+            color: #333;
+            margin: 20px;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+        }
+        .verse {
+            margin-bottom: 20px;
+            padding: 15px;
+            border-left: 5px solid #3498db;
+            background-color: #ffffff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .verse-number {
+            font-weight: bold;
+            color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <h1>Selected Quranic Verses</h1>
+    <div class="verse">
+        <span class="verse-number">1. </span>
+        In the name of Allah, the Most Gracious, the Most Merciful.
     </div>
-
-    <!-- Scripts -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/main.js"></script>
-  </body>
+    <div class="verse">
+        <span class="verse-number">2. </span>
+        Praise be to Allah, the Lord of all the worlds.
+    </div>
+    <div class="verse">
+        <span class="verse-number">3. </span>
+        The Most Gracious, the Most Merciful.
+    </div>
+    <div class="verse">
+        <span class="verse-number">4. </span>
+        Master of the Day of Judgment.
+    </div>
+    <!-- Add more verses as needed -->
+    <div class="verse">
+        <span class="verse-number">100. </span>
+        So remember Me; I will remember you. And be grateful to Me and do not deny Me.
+    </div>
+</body>
 </html>
