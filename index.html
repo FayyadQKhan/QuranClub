@@ -29,30 +29,87 @@
             font-weight: bold;
             color: #2980b9;
         }
+        #add-verse-form {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+        }
+        #verse-input {
+            width: 70%;
+            padding: 10px;
+            margin-right: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        #add-verse-btn {
+            padding: 10px 15px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        #add-verse-btn:hover {
+            background-color: #2980b9;
+        }
     </style>
 </head>
 <body>
     <h1>Selected Quranic Verses</h1>
-    <div class="verse">
-        <span class="verse-number">1. </span>
-        In the name of Allah, the Most Gracious, the Most Merciful.
+    <div id="verses-container">
+        <div class="verse">
+            <span class="verse-number">1. </span>
+            In the name of Allah, the Most Gracious, the Most Merciful.
+        </div>
+        <div class="verse">
+            <span class="verse-number">2. </span>
+            Praise be to Allah, the Lord of all the worlds.
+        </div>
+        <div class="verse">
+            <span class="verse-number">3. </span>
+            The Most Gracious, the Most Merciful.
+        </div>
+        <div class="verse">
+            <span class="verse-number">4. </span>
+            Master of the Day of Judgment.
+        </div>
+        <!-- Add more verses as needed -->
+        <div class="verse">
+            <span class="verse-number">100. </span>
+            So remember Me; I will remember you. And be grateful to Me and do not deny Me.
+        </div>
     </div>
-    <div class="verse">
-        <span class="verse-number">2. </span>
-        Praise be to Allah, the Lord of all the worlds.
+
+    <div id="add-verse-form">
+        <input type="text" id="verse-input" placeholder="Enter your verse here..." />
+        <button id="add-verse-btn">Add Phrase</button>
     </div>
-    <div class="verse">
-        <span class="verse-number">3. </span>
-        The Most Gracious, the Most Merciful.
-    </div>
-    <div class="verse">
-        <span class="verse-number">4. </span>
-        Master of the Day of Judgment.
-    </div>
-    <!-- Add more verses as needed -->
-    <div class="verse">
-        <span class="verse-number">100. </span>
-        So remember Me; I will remember you. And be grateful to Me and do not deny Me.
-    </div>
+
+    <script>
+        document.getElementById('add-verse-btn').addEventListener('click', function() {
+            const verseInput = document.getElementById('verse-input');
+            const verseText = verseInput.value.trim();
+
+            if (verseText) {
+                const versesContainer = document.getElementById('verses-container');
+
+                // Get the current number of verses
+                const verseCount = versesContainer.getElementsByClassName('verse').length;
+
+                // Create a new verse element
+                const newVerse = document.createElement('div');
+                newVerse.classList.add('verse');
+                newVerse.innerHTML = `<span class="verse-number">${verseCount + 1}. </span>${verseText}`;
+
+                // Append the new verse to the container
+                versesContainer.appendChild(newVerse);
+
+                // Clear the input field
+                verseInput.value = '';
+            } else {
+                alert('Please enter a verse before adding.');
+            }
+        });
+    </script>
 </body>
 </html>
