@@ -1,21 +1,22 @@
-document.addEventListener("DOMContentLoaded", () => {
-  document.querySelectorAll(".edit-btn").forEach((button) => {
-    button.addEventListener("click", () => {
-      alert("Edit functionality coming soon!");
-    });
-  });
+// Handling button interactions
 
-  document.querySelectorAll(".delete-btn").forEach((button) => {
-    button.addEventListener("click", () => {
-      alert("Delete functionality coming soon!");
-    });
-  });
+// Save button logic
+document.getElementById('saveBtn').addEventListener('click', () => {
+    alert("Data saved successfully!");
+    // Add your custom save logic here
+});
 
-  document.querySelector(".add-btn").addEventListener("click", () => {
-    alert("Add Phrase functionality coming soon!");
-  });
+// Delete button logic
+document.getElementById('deleteBtn').addEventListener('click', () => {
+    alert("Data deleted!");
+    // Add your custom delete logic here
+});
 
-  document.querySelector(".save-btn").addEventListener("click", () => {
-    alert("Save Files functionality coming soon!");
-  });
+// File upload logic
+document.getElementById('fileUpload').addEventListener('change', (event) => {
+    const file = event.target.files[0];
+    if (file) {
+        alert(`File uploaded: ${file.name}`);
+        // Add your custom file handling logic here
+    }
 });
