@@ -1,71 +1,68 @@
 <!DOCTYPE HTML>
 <html>
-<head>
-  <title>Quranic Verses</title>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-  <link rel="stylesheet" href="assets/css/main.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
-  <style>
-    body {
-      font-family: 'Noto Sans', sans-serif;
-      background: linear-gradient(to bottom, #1e3c72, #2a5298);
-      color: #fff;
-      margin: 0;
-      padding: 0;
-    }
-    #header {
-      text-align: center;
-      padding: 20px;
-    }
-    #main {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-around;
-      padding: 20px;
-    }
-    .verse {
-      width: 300px;
-      margin: 15px;
-      padding: 20px;
-      background-color: rgba(255, 255, 255, 0.1);
-      border-radius: 10px;
-      transition: transform 0.3s;
-      text-align: center;
-    }
-    .verse:hover {
-      transform: scale(1.05);
-    }
-    #footer {
-      text-align: center;
-      padding: 30px;
-      background-color: rgba(0, 0, 0, 0.5);
-    }
-    .icon {
-      margin: 5px;
-    }
-  </style>
-</head>
-<body>
-  <header id="header">
-    <h1>Quranic Verses</h1>
-  </header>
-  <div id="main">
-    <div class="verse">
-      <h2>Verse 1</h2>
-      <p>"Indeed, Allah is with those who are patient." (Quran 2:153)</p>
+  <head>
+    <title>Quranic Verses and Custom Phrases</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+  </head>
+  <body class="is-preload">
+    <!-- Wrapper -->
+    <div id="wrapper">
+      <!-- Header -->
+      <header id="header">
+        <h1>Quranic Verses and Explanations</h1>
+      </header>
+
+      <!-- Main -->
+      <div id="main">
+        <!-- Quranic Verses Section -->
+        <section class="verse-section">
+          <h2>Quranic Verses</h2>
+          <div class="verse">
+            <h3>Verse 1</h3>
+            <p>“Indeed, Allah is with those who are patient.” - Quran 2:153</p>
+          </div>
+          <div class="verse">
+            <h3>Verse 2</h3>
+            <p>“And He found you lost and guided [you].” - Quran 93:7</p>
+          </div>
+        </section>
+
+        <!-- Custom Phrases and Explanations Section -->
+        <section class="custom-section">
+          <h2>Custom Phrases and Explanations</h2>
+          <div class="phrase">
+            <h3>Phrase: Bismillah</h3>
+            <p>Explanation: "In the name of Allah, the Most Gracious, the Most Merciful."</p>
+            <button class="edit-btn">Edit</button>
+            <button class="delete-btn">Delete</button>
+          </div>
+          <button class="add-btn">Add Phrase</button>
+        </section>
+
+        <!-- File Upload Section -->
+        <section class="upload-section">
+          <h2>Upload Images and Files</h2>
+          <form id="file-upload-form" method="post" enctype="multipart/form-data">
+            <input type="file" name="file" accept=".jpg,.jpeg,.png,.pdf,.csv" />
+            <button type="submit" class="upload-button">Upload</button>
+          </form>
+          <button class="save-btn">Save Files</button>
+          <button class="delete-btn">Delete Files</button>
+        </section>
+      </div>
+
+      <!-- Footer -->
+      <footer id="footer" class="panel">
+        <div class="inner">
+          <p>&copy; Your Website. All rights reserved.</p>
+        </div>
+      </footer>
     </div>
-    <div class="verse">
-      <h2>Verse 2</h2>
-      <p>"And He found you lost and guided [you]." (Quran 93:7)</p>
-    </div>
-    <!-- Add more verses as needed -->
-  </div>
-  <footer id="footer">
-    <p>&copy; 2024 Quran Club. Follow us:</p>
-    <i class="icon fab fa-facebook"></i>
-    <i class="icon fab fa-twitter"></i>
-    <i class="icon fab fa-instagram"></i>
-  </footer>
-</body>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
 </html>
